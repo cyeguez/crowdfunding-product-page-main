@@ -134,7 +134,7 @@ label {
   color: inherit;
   display: block;
   /* (Opcional) */
-  appearance: none;
+  // appearance: none;
 }
 
 /* Reseteamos las tablas */
@@ -158,7 +158,7 @@ body {
   font-size: 100%;
   font-family: var(--font);
   font-weight: 400;
-  color: --White;
+  color: --Dark-gray;
   
   // /* (Opcional) */ hyphens: auto;
   /* (Opcional) */

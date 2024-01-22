@@ -1,0 +1,268 @@
+@use "../base/mixins" as m;
+.main {
+  z-index: -1;
+  padding-inline: 1.5rem;
+
+  .start-section {
+    margin-top: -55px;
+    position: relative;
+
+    &__logo {
+      position: absolute;
+      top: -30px;
+      left: 40%;
+    }
+
+    &__title {
+      position: static;
+      width: 75%;
+      text-align: center;
+      margin: 0 auto;
+      font-weight: 800;
+      padding-top: 3.5rem;
+      color: var(--Black);
+    }
+
+    &__intro {
+      margin-top: 25px;
+      font-size: 0.875em;
+      text-align: center;
+      line-height: 1.5rem;
+    }
+
+    &__container-button {
+      position: static;
+      @include m.flex(row, no-wrap, space-between, center);
+      padding-block: 1.5rem 2.5625rem;
+
+      .bookmark {
+        .icon-bookmark:hover {
+          cursor: pointer;
+          fill: rgb(85, 21, 21);
+          color: blue;
+        }
+      }
+
+      &__text {
+        display: none;
+      }
+    }
+  }
+
+  .second-section {
+    &__content {
+      width: 100%;
+      text-align: center;
+
+      &__numbers {
+        padding-top: 2.375rem;
+        font-size: 2.375em;
+        font-weight: 800;
+        color: var(--Black);
+      }
+
+      &__text {
+        font-weight: 400;
+      }
+
+      hr {
+        width: 5.4375rem;
+        height: 2px;
+        background-color: var(--Gray);
+        margin: 1rem auto;
+      }
+    }
+
+    .bar {
+      width: 100%;
+      height: 0.6875rem;
+
+      border-radius: 50px;
+      margin-block: 1.875rem 2.375rem;
+    }
+    progress::-webkit-progress-bar {
+      background-color: #f1f1f1;
+      border-radius: 50px;
+    }
+    progress::-webkit-progress-value {
+      background-color: var(--Moderate-cyan);
+      border-radius: 50px;
+      border: none;
+    }
+  }
+  .third-section {
+    padding-bottom: 2.375rem;
+    &__title {
+      padding-top: 2.625rem;
+      margin-bottom: 38px;
+      font-weight: 800;
+      color: var(--Black);
+    }
+
+    &__text {
+      line-height: 1.5rem;
+      font-size: 0.875em;
+      margin-bottom: 2.3125rem;
+      font-weight: 400;
+      color: var(--Dark-gray);
+    }
+
+    &__card {
+      border: 1px solid var(--Gray);
+      border-radius: 5px;
+      padding: 1.5rem;
+      font-size: 0.75em;
+      margin-bottom: 1.5rem;
+
+      &__title {
+        color: var(--Black);
+        font-weight: 500;
+        margin-bottom: 0.75rem;
+      }
+
+      &__subtitle {
+        color: var(--Moderate-cyan);
+        font-weight: 500;
+        margin-bottom: 1.9375rem;
+      }
+      &__content {
+        line-height: 1.5rem;
+        letter-spacing: 0.7px;
+      }
+
+      .price-container {
+        @include m.flex(row, no-wrap, flex-start, center);
+        gap: 0.75rem;
+        margin-block: 2.3125rem 1.8125rem;
+        &__price {
+          color: var(--Black);
+          font-size: 2em;
+          font-weight: 800;
+        }
+        &__text {
+          font-size: 0.75em;
+          color: var(--Dark-gray);
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .modal {
+    background-color: var(--White);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
+      -5px -5px 10px rgba(0, 0, 0, 0.1);
+    padding: 2.0625rem 24px;
+    border-radius: 5px;
+    color: var(--Dark-gray);
+    font-size: 0.8125em;
+
+    &__container {
+      width: 100%;
+      @include m.flex(row, no-wrap, space-between, center);
+      margin-bottom: 2.0625rem;
+
+      &__title {
+        width: fit-content;
+        color: var(--Black);
+        font-weight: 800;
+        white-space: nowrap;
+        font-size: 1rem;
+      }
+
+      &__close-modal {
+        width: fit-content;
+        fill: var(--Dark-gray);
+      }
+    }
+
+    &__subtitle {
+      width: 100%;
+
+      font-size: 13px;
+      line-height: 1.5rem;
+      margin-bottom: 1.75rem;
+    }
+
+    &__card {
+      border: 1px solid var(--Gray);
+      border-radius: 5px;
+      margin-bottom: 1.5rem;
+      padding: 2.0625rem 1.25rem;
+
+      &__container-select {
+        @include m.flex(row, wrap, flex-start, center);
+        gap: 1rem;
+        cursor: pointer;
+        .input{
+         width: 1.2rem;
+         height: 1.2rem;
+         cursor: pointer;
+          
+        }
+
+        label{
+          color: var(--Black);
+          font-weight: 800;
+
+          span{
+            color : var(--Moderate-cyan)
+          };
+
+          &:hover{
+            cursor: pointer;
+          }
+        }
+        
+      }
+
+      &__text{
+        margin-top: 2.5rem;
+        line-height: 1.5rem;
+        width: 95%;
+      }
+
+      &__price{
+        color: var(--Black);
+        font-weight: 800;
+        margin-top: 2.0625rem;
+        font-size: 14px;
+
+        span{
+          font-weight: 400;
+          color: var(--Dark-gray);
+        }
+      }
+    }
+  }
+
+  .modal-sucess{
+    background-color: var(--White);
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 0 auto;
+    padding-inline: 1rem;
+    
+    &__icon{
+      width: fit-content;
+      margin: 2.75rem auto 3.25rem auto;   
+      
+    }
+    &__title{
+      text-align: center;
+      margin: 0 auto 1.3125rem auto;
+      color: var(--Black);
+      font-weight: 800;
+    }
+
+    &__text{
+      text-align: center;      
+      font-size: 0.6rem;
+      line-height: 1.5rem;
+      margin-bottom: 37px;
+    }
+
+
+  }
+}

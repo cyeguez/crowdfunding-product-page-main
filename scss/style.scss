@@ -1,4 +1,6 @@
 @forward './components/header';
+@forward './components/main';
 
 @use './base/var';
+@use './base/style-general';
 @use './base/reset';

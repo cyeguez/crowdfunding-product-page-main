@@ -1,0 +1,41 @@
+.hidden {
+  width: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: width 800ms ease-in-out;
+}
+
+.section {
+  padding-inline: 1rem;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  background-color: var(--White);
+  color: var(--Dark-gray);
+}
+
+.button {
+  white-space: no-wrap;
+  padding: 1rem 2rem;
+  border-radius: 3.125rem;
+  background-color: var(--Moderate-cyan);
+  color: var(--White);
+  font-weight: 500;
+
+  &:hover {
+    background-color: var(--Dark-cyan);
+    cursor: pointer;
+
+    .icon-bookmark {
+    }
+  }
+}
+
+.button-out {
+  background-color: var(--Dark-gray) ;
+
+  &:hover {
+    background-color: var(--Dark-cyan);
+    cursor: pointer;
+  }
+}
