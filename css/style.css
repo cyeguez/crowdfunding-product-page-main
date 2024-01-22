@@ -17,11 +17,9 @@
   align-items: center;
 }
 .header__container .icon-menu {
-  width: -moz-fit-content;
   width: fit-content;
 }
 .header__container .icon-menu-close {
-  width: -moz-fit-content;
   width: fit-content;
   display: none;
 }
@@ -207,7 +205,6 @@
   margin-bottom: 2.0625rem;
 }
 .main .modal__container__title {
-  width: -moz-fit-content;
   width: fit-content;
   color: var(--Black);
   font-weight: 800;
@@ -215,7 +212,6 @@
   font-size: 1rem;
 }
 .main .modal__container__close-modal {
-  width: -moz-fit-content;
   width: fit-content;
   fill: var(--Dark-gray);
 }
@@ -277,9 +273,9 @@
   width: 100%;
   margin: 0 auto;
   padding-inline: 1rem;
+  padding-bottom: 3rem;
 }
 .main .modal-sucess__icon {
-  width: -moz-fit-content;
   width: fit-content;
   margin: 2.75rem auto 3.25rem auto;
 }
@@ -294,6 +290,10 @@
   font-size: 0.6rem;
   line-height: 1.5rem;
   margin-bottom: 37px;
+}
+.main .modal-sucess .button-go-it {
+  margin: 2rem auto 46px auto;
+  margin-bottom: 2rem;
 }
 
 :root {
@@ -391,11 +391,9 @@ figure {
   width: 100%;
   display: block;
   /* (Opcional) */
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   /* (Opcional) */
-  -o-object-position: center center;
-     object-position: center center;
+  object-position: center center;
 }
 
 /* Reseteamos los enlaces para funcionar como cajas... */
@@ -454,10 +452,6 @@ q:after {
 }
 
 /* (Opcional) Configuramos el texto que seleccionamos */
-::-moz-selection {
-  background-color: var(--negro);
-  color: var(--blanco);
-}
 ::selection {
   background-color: var(--negro);
   color: var(--blanco);
@@ -472,8 +466,7 @@ button,
 label {
   font-family: inherit;
   font-size: inherit;
-  -webkit-hyphens: auto;
-          hyphens: auto;
+  hyphens: auto;
   background-color: transparent;
   color: inherit;
   display: block;
@@ -508,4 +501,4 @@ body {
   -webkit-font-smoothing: antialiased;
   /* (Opcional) */
   -moz-osx-font-smoothing: grayscale;
-}/*# sourceMappingURL=style.css.map */
+}

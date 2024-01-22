@@ -243,6 +243,7 @@
     width: 100%;
     margin: 0 auto;
     padding-inline: 1rem;
+    padding-bottom: 3rem;
     
     &__icon{
       width: fit-content;
@@ -261,6 +262,11 @@
       font-size: 0.6rem;
       line-height: 1.5rem;
       margin-bottom: 37px;
+    }
+
+    .button-go-it{
+      margin: 2rem auto 46px auto;
+      margin-bottom: 2rem;
     }
 
 
