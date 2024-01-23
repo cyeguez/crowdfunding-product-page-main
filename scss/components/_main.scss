@@ -158,7 +158,6 @@
     font-size: 0.8125em;
 
     &__container {
-      width: 100%;
       @include m.flex(row, no-wrap, space-between, center);
       margin-bottom: 2.0625rem;
 
@@ -189,54 +188,97 @@
       border-radius: 5px;
       margin-bottom: 1.5rem;
       padding: 2.0625rem 1.25rem;
+      position: relative;
 
       &__container-select {
         @include m.flex(row, wrap, flex-start, center);
         gap: 1rem;
         cursor: pointer;
-        .input{
-         width: 1.2rem;
-         height: 1.2rem;
-         cursor: pointer;
-          
+        .input {
+          width: 1.2rem;
+          height: 1.2rem;
+          cursor: pointer;
         }
 
-        label{
+        label {
           color: var(--Black);
           font-weight: 800;
 
-          span{
-            color : var(--Moderate-cyan)
-          };
+          span {
+            color: var(--Moderate-cyan);
+          }
 
-          &:hover{
+          &:hover {
             cursor: pointer;
           }
         }
-        
       }
 
-      &__text{
+      &__text {
         margin-top: 2.5rem;
         line-height: 1.5rem;
         width: 95%;
       }
 
-      &__price{
+      &__price {
         color: var(--Black);
         font-weight: 800;
         margin-top: 2.0625rem;
         font-size: 14px;
 
-        span{
+        span {
           font-weight: 400;
           color: var(--Dark-gray);
+        }
+      }
+      &__cost {
+        margin-top: 1.25rem;
+
+        hr {
+          position: absolute;
+          margin: 0 auto;
+          height: 1px;
+          background-color: var(--Gray);
+          left: 0;
+          right: 0;
+          width: 100%;
+        }
+
+        p {
+          position: relative;
+          text-align: center;
+          color: var(--Dark-gray);
+          margin-bottom: 1rem;
+          padding-top: 2.125rem;
+        }
+
+        &__container-input {
+          padding-inline: 1rem;
+          @include m.flex(row, no-wrap, space-between, center);
+          gap: 1rem;
+
+          .input-text {
+            width: 6.0625rem;
+            height: 2.9375rem;
+            border: 1px solid var(--Gray);
+            border-radius: 50px;
+            color: var(--Black);
+            font-weight: 800;
+            outline-color: var(--Black);
+            text-align: center;
+            position: relative;
+            outline: none;
+            background-image: url("./images/dollar.svg");
+            background-size: 15px 15px;
+            background-repeat: no-repeat;
+    
+          }
         }
       }
     }
   }
 
-  .modal-sucess{
+  .modal-sucess {
     background-color: var(--White);
     border-radius: 5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
@@ -244,31 +286,28 @@
     margin: 0 auto;
     padding-inline: 1rem;
     padding-bottom: 3rem;
-    
-    &__icon{
+
+    &__icon {
       width: fit-content;
-      margin: 2.75rem auto 3.25rem auto;   
-      
+      margin: 2.75rem auto 3.25rem auto;
     }
-    &__title{
+    &__title {
       text-align: center;
       margin: 0 auto 1.3125rem auto;
       color: var(--Black);
       font-weight: 800;
     }
 
-    &__text{
-      text-align: center;      
+    &__text {
+      text-align: center;
       font-size: 0.6rem;
       line-height: 1.5rem;
       margin-bottom: 37px;
     }
 
-    .button-go-it{
+    .button-go-it {
       margin: 2rem auto 46px auto;
       margin-bottom: 2rem;
     }
-
-
   }
 }

@@ -196,7 +196,6 @@
   font-size: 0.8125em;
 }
 .main .modal__container {
-  width: 100%;
   display: flex;
   flex-direction: row;
   flex-flow: row no-wrap;
@@ -226,6 +225,7 @@
   border-radius: 5px;
   margin-bottom: 1.5rem;
   padding: 2.0625rem 1.25rem;
+  position: relative;
 }
 .main .modal__card__container-select {
   display: flex;
@@ -265,6 +265,49 @@
 .main .modal__card__price span {
   font-weight: 400;
   color: var(--Dark-gray);
+}
+.main .modal__card__cost {
+  margin-top: 1.25rem;
+}
+.main .modal__card__cost hr {
+  position: absolute;
+  margin: 0 auto;
+  height: 1px;
+  background-color: var(--Gray);
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.main .modal__card__cost p {
+  position: relative;
+  text-align: center;
+  color: var(--Dark-gray);
+  margin-bottom: 1rem;
+  padding-top: 2.125rem;
+}
+.main .modal__card__cost__container-input {
+  padding-inline: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row no-wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.main .modal__card__cost__container-input .input-text {
+  width: 6.0625rem;
+  height: 2.9375rem;
+  border: 1px solid var(--Gray);
+  border-radius: 50px;
+  color: var(--Black);
+  font-weight: 800;
+  outline-color: var(--Black);
+  text-align: center;
+  position: relative;
+  outline: none;
+  background-image: url("./images/dollar.svg");
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
 }
 .main .modal-sucess {
   background-color: var(--White);
