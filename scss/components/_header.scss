@@ -6,7 +6,7 @@
   background-image: url("../images/image-hero-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: 1;
+  // z-index: 1;
 
   &__container {
     padding: 2rem 1.5rem;
@@ -14,24 +14,21 @@
 
     .icon-menu {
       width: fit-content;
-     
+      cursor: pointer;
     }
 
-    .icon-menu-close{
+    .icon-menu-close {
       width: fit-content;
       display: none;
-
     }
 
     .nav {
       width: 100%;
       background-color: var(--White);
       margin-top: 2rem;
-      border-radius: 5px;
+      border-radius: 8px;
       box-shadow: 5px 10px 12px rgba(0, 0, 0, 0.1);
       transition: width 800ms ease-in-out, opacity 800ms ease-in-out;
-      
-      
 
       ul {
         @include m.flex(column, no-wrap, center, flex-start);
@@ -41,14 +38,69 @@
           padding: 1.6rem;
           font-weight: 500;
 
-          &:hover{
+          &:hover {
             cursor: pointer;
-            color: var(--Dark-gray)
+            color: var(--Dark-gray);
           }
         }
         li:nth-child(1),
         li:nth-child(2) {
           border-bottom: 1px solid var(--Gray);
+        }
+      }
+    }
+  }
+
+  /* --------------------------- Styles mode Desktop --------------------------- */
+
+  @media screen and (min-width: 768px) {
+    width: min(100%, 1440px);
+    margin: 0 auto;
+    height: 18.75rem;
+    background-image: url("../images/image-hero-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    // z-index: 1;
+
+    &__container {
+      padding: 2rem 1.5rem;
+      @include m.flex(row, wrap, space-between, center);
+         
+
+      .icon-menu {
+        width: fit-content;
+        cursor: pointer;
+        display: none;
+      }
+
+      .icon-menu-close {
+        width: fit-content;
+        display: none;
+      }
+
+      .nav {
+        width: 80%;
+        height: auto;
+        pointer-events: all;
+        background: none;        
+        margin-top: 0;
+        border-radius: 8px;
+        box-shadow: none;
+        transition: width 800ms ease-in-out, opacity 800ms ease-in-out;
+        opacity: 1;
+        @include m.flex(row, no-wrap, flex-end, center);
+
+        ul {
+          @include m.flex(row, no-wrap, center, flex-end);
+          color: var(--White);
+
+          li {
+            width: fit-content;
+          }
+          li:nth-child(1),
+          li:nth-child(2) {
+            border-bottom: none;
+          }
         }
       }
     }
